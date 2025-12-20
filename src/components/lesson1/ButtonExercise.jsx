@@ -3,7 +3,7 @@ class ButtonExercise extends Component {
     render() { 
         return (
             <div>
-                <button>Good job!</button>
+                <button>{this.props.value == null ? "Good Job!" : this.props.value}</button>
             </div>
         );
     }
