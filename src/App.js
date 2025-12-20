@@ -3,6 +3,7 @@ import ButtonExercise from './components/lesson1/ButtonExercise';
 import ParaExercise from './components/lesson1/ParaExercise';
 import SampleDesign from './components/lesson1/SampleDesign';
 import JSSumOneD from './components/lesson1/JSSumOneD';
+import DisplayDateOneG from './components/lesson1/DisplayDateOneG';
 /**
  * Exercises from Lesson 1
  */
@@ -13,6 +14,7 @@ function App() {
       <ParaExercise /><hr/>
       <SampleDesign /><hr/>
       <JSSumOneD /><hr/>
+      <DisplayDateOneG /><hr/>
     </>
   );
 }
