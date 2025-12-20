@@ -41,9 +41,7 @@ import Solution2C from './components/lesson2/Solution2C';
 function App() {
   return (
     <>
-      <SampleText2A /><hr/>
-      <Solution2B /><hr/>
-      <Solution2C /><hr/>
+      <LoginForm /><hr/>
     </>
   );
 }
