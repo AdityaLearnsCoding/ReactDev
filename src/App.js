@@ -15,6 +15,9 @@ import DisplayDateInParaOneH from './components/lesson1/DisplayDateInParaOneH';
 import DisplayTimeOneI from './components/lesson1/DisplayTimeOneI';
 
 import SampleText2A from './components/lesson2/SampleText2A';
+import Solution2B from './components/lesson2/Solution2B';
+import Solution2C from './components/lesson2/Solution2C';
+
 /**
  * Exercises from Lesson 1
  */
@@ -32,10 +35,15 @@ import SampleText2A from './components/lesson2/SampleText2A';
 //   );
 // }
 
+/**
+ * Exercises from Lesson 2
+ */
 function App() {
   return (
     <>
       <SampleText2A /><hr/>
+      <Solution2B /><hr/>
+      <Solution2C /><hr/>
     </>
   );
 }
