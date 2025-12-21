@@ -6,7 +6,7 @@ class Solution3A extends Component {
     render() { 
         return (
             <>
-                <button onClick={handleClick}>Clicked 0 times</button>
+                <button onClick={this.handleClick}>Clicked 0 times</button>
             </>
         );
     }

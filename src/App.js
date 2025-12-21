@@ -20,10 +20,13 @@ import SampleText2A from './components/lesson2/SampleText2A';
 import Solution2B from './components/lesson2/Solution2B';
 // eslint-disable-next-line
 import Solution2C from './components/lesson2/Solution2C';
-
+// eslint-disable-next-line
 import ProductDetails from './components/lesson2/ecommerce_site/ProductDetails';
+// eslint-disable-next-line
 import cottonSocksPng from "./components/lesson2/ecommerce_site/assets/cotton-socks.png"; 
+// eslint-disable-next-line
 import plainTShirt from "./components/lesson2/ecommerce_site/assets/plain-t-shirt.png"; 
+// eslint-disable-next-line
 import tennisBalls from "./components/lesson2/ecommerce_site/assets/tennis-balls.png"; 
 
 /**
@@ -75,10 +78,13 @@ import tennisBalls from "./components/lesson2/ecommerce_site/assets/tennis-balls
  * Exercises from Lesson 3
  */
 import Solution3A from './components/lesson3/Solution3A';
+import Solution3B from './components/lesson3/Solution3B';
 function App() {
   return (
     <>
       <Solution3A />
+      <hr/>
+      <Solution3B /> <hr/>
     </>
   );
 }
