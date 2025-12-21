@@ -77,27 +77,38 @@ import tennisBalls from "./components/lesson2/ecommerce_site/assets/tennis-balls
 /**
  * Exercises from Lesson 3
  */
-import Solution3A from './components/lesson3/Solution3A';
-import Solution3B from './components/lesson3/Solution3B';
-import Solution3C from './components/lesson3/Solution3C';
-import Solution3G3H from './components/lesson3/Solution3G3H';
-import { useState } from 'react';
+// import Solution3A from './components/lesson3/Solution3A';
+// import Solution3B from './components/lesson3/Solution3B';
+// import Solution3C from './components/lesson3/Solution3C';
+// import Solution3G3H from './components/lesson3/Solution3G3H';
+// import { useState } from 'react';
+// function App() {
+//   const [count, setCount] = useState(0);
+//   const updateCount = () => {
+//     setCount(count + 1);
+//   }
+//   const resetCount = () => {
+//     setCount(0);
+//   }
+//   return (
+//     <>
+//       <Solution3A />
+//       <hr/>
+//       <Solution3B count={count} updateCount={updateCount} />
+//       <Solution3C count={count} updateCount={updateCount} />
+//       <button onClick={resetCount} >Reset Count</button>
+//       <hr/>
+//       <Solution3G3H />
+//     </>
+//   );
+// }
+/**
+ * Excercises from Lesson 4
+ */
 function App() {
-  const [count, setCount] = useState(0);
-  const updateCount = () => {
-    setCount(count + 1);
-  }
-  const resetCount = () => {
-    setCount(0);
-  }
   return (
     <>
-      <Solution3A />
-      <hr/>
-      <Solution3B count={count} updateCount={updateCount} /><Solution3C count={count} updateCount={updateCount} />
-      <button onClick={resetCount} >Reset Count</button>
-      <hr/>
-      <Solution3G3H />
+      {/* Lesson 4 exercises go here */}
     </>
   );
 }
