@@ -80,6 +80,7 @@ import tennisBalls from "./components/lesson2/ecommerce_site/assets/tennis-balls
 import Solution3A from './components/lesson3/Solution3A';
 import Solution3B from './components/lesson3/Solution3B';
 import Solution3C from './components/lesson3/Solution3C';
+import Solution3G3H from './components/lesson3/Solution3G3H';
 import { useState } from 'react';
 function App() {
   const [count, setCount] = useState(0);
@@ -95,6 +96,8 @@ function App() {
       <hr/>
       <Solution3B count={count} updateCount={updateCount} /><Solution3C count={count} updateCount={updateCount} />
       <button onClick={resetCount} >Reset Count</button>
+      <hr/>
+      <Solution3G3H />
     </>
   );
 }
