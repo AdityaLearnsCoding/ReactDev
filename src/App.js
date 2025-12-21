@@ -46,27 +46,39 @@ import tennisBalls from "./components/lesson2/ecommerce_site/assets/tennis-balls
 /**
  * Exercises from Lesson 2
  */
+// function App() {
+//   return (
+//     <>
+//       {/* <LoginForm /><hr/> */}
+//       <ProductDetails
+//         imageSrc={ cottonSocksPng }
+//         productName="Cotton Socks"
+//         price={10.9}
+//         discountedPrice={5.45}
+//       />
+//       <ProductDetails
+//         imageSrc={ plainTShirt }
+//         productName="Plain T-Shirt"
+//         price={7.99}
+//         discountedPrice={5.45}
+//       />
+//       <ProductDetails
+//         imageSrc={ tennisBalls }
+//         productName="Tennis Balls"
+//         price={6.0}
+//       />
+//     </>
+//   );
+// }
+
+/**
+ * Exercises from Lesson 3
+ */
+import Solution3A from './components/lesson3/Solution3A';
 function App() {
   return (
     <>
-      {/* <LoginForm /><hr/> */}
-      <ProductDetails
-        imageSrc={ cottonSocksPng }
-        productName="Cotton Socks"
-        price={10.9}
-        discountedPrice={5.45}
-      />
-      <ProductDetails
-        imageSrc={ plainTShirt }
-        productName="Plain T-Shirt"
-        price={7.99}
-        discountedPrice={5.45}
-      />
-      <ProductDetails
-        imageSrc={ tennisBalls }
-        productName="Tennis Balls"
-        price={6.0}
-      />
+      <Solution3A />
     </>
   );
 }
