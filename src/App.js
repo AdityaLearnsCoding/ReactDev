@@ -79,12 +79,14 @@ import tennisBalls from "./components/lesson2/ecommerce_site/assets/tennis-balls
  */
 import Solution3A from './components/lesson3/Solution3A';
 import Solution3B from './components/lesson3/Solution3B';
+import Solution3C from './components/lesson3/Solution3C';
 function App() {
   return (
     <>
       <Solution3A />
       <hr/>
       <Solution3B /> <hr/>
+      <Solution3B /><Solution3C />
     </>
   );
 }
