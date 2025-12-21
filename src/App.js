@@ -86,11 +86,15 @@ function App() {
   const updateCount = () => {
     setCount(count + 1);
   }
+  const resetCount = () => {
+    setCount(0);
+  }
   return (
     <>
       <Solution3A />
       <hr/>
       <Solution3B count={count} updateCount={updateCount} /><Solution3C count={count} updateCount={updateCount} />
+      <button onClick={resetCount} >Reset Count</button>
     </>
   );
 }
