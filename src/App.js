@@ -110,6 +110,7 @@ import HomePage from './components/ecomm_site/pages/HomePage';
 import CheckoutPage from './components/ecomm_site/pages/CheckoutPage';
 import OrdersPage from './components/ecomm_site/pages/OrdersPage';
 import TrackingPage from './components/ecomm_site/pages/TrackingPage';
+import NotFoundPage from './components/ecomm_site/pages/NotFound';
 
 // React Router:
 import { Route, Routes } from 'react-router';
@@ -118,9 +119,10 @@ function App() {
     <>
       <Routes>
         <Route index element={<HomePage />} />  {/* Default route, index is equivalent to path='/'  */}
-        <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/orders" element={<OrdersPage />} />
-        <Route path="/tracking" element={<TrackingPage />} />
+        <Route path="checkout" element={<CheckoutPage />} />
+        <Route path="orders" element={<OrdersPage />} />
+        <Route path="tracking" element={<TrackingPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );

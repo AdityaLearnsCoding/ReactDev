@@ -8,9 +8,9 @@ const TrackingPage = () => {
             <PageHeader />
             <div className="tracking-page">
                 <div className="order-tracking">
-                    <a className="back-to-orders-link link-primary" href="/orders">
+                    <NavLink className="back-to-orders-link link-primary" to="/orders">
                     View all orders
-                    </a>
+                    </NavLink>
 
                     <div className="delivery-date">
                     Arriving on Monday, June 13
