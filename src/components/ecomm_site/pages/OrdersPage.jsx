@@ -1,6 +1,6 @@
 import './OrdersPage.css';
 import PageHeader from './Header';
-import { Link } from 'react-router';
+import { NavLink } from 'react-router';
 
 const OrdersPage = () => {
     return (
@@ -82,11 +82,11 @@ const OrdersPage = () => {
                         </div>
 
                         <div className="product-actions">
-                        <Link to="/tracking">
+                        <NavLink to="/tracking">
                             <button className="track-package-button button-secondary">
                             Track package
                             </button>
-                        </Link>
+                        </NavLink>
                         </div>
                     </div>
                     </div>
@@ -133,11 +133,11 @@ const OrdersPage = () => {
                         </div>
 
                         <div className="product-actions">
-                        <Link to="/tracking" >
+                        <NavLink to="/tracking" >
                             <button className="track-package-button button-secondary">
                             Track package
                             </button>
-                        </Link>
+                        </NavLink>
                         </div>
                     </div>
                     </div>

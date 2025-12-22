@@ -148,6 +148,6 @@
   text-align: center;
 }
 
-.orders-link .active {
+.orders-link.active {
   text-decoration: underline;
 }
