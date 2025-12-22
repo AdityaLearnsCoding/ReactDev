@@ -28,10 +28,6 @@ import cottonSocksPng from "./components/lesson2/ecommerce_site/assets/cotton-so
 import plainTShirt from "./components/lesson2/ecommerce_site/assets/plain-t-shirt.png"; 
 // eslint-disable-next-line
 import tennisBalls from "./components/lesson2/ecommerce_site/assets/tennis-balls.png"; 
-import HomePage from './components/ecomm_site/pages/HomePage';
-
-// React Router:
-import { Route, Routes } from 'react-router';
 
 /**
  * Exercises from Lesson 1
@@ -109,11 +105,22 @@ import { Route, Routes } from 'react-router';
 /**
  * Excercises from Lesson 5
  */
+
+import HomePage from './components/ecomm_site/pages/HomePage';
+import CheckoutPage from './components/ecomm_site/pages/CheckoutPage';
+import OrdersPage from './components/ecomm_site/pages/OrdersPage';
+import TrackingPage from './components/ecomm_site/pages/TrackingPage';
+
+// React Router:
+import { Route, Routes } from 'react-router';
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route index element={<HomePage />} />  {/* Default route, index is equivalent to path='/'  */}
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/orders" element={<OrdersPage />} />
+        <Route path="/tracking" element={<TrackingPage />} />
       </Routes>
     </>
   );
