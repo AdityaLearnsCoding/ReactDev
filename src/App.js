@@ -30,6 +30,9 @@ import plainTShirt from "./components/lesson2/ecommerce_site/assets/plain-t-shir
 import tennisBalls from "./components/lesson2/ecommerce_site/assets/tennis-balls.png"; 
 import HomePage from './components/ecomm_site/pages/HomePage';
 
+// React Router:
+import { Route, Routes } from 'react-router';
+
 /**
  * Exercises from Lesson 1
  */
@@ -109,7 +112,9 @@ import HomePage from './components/ecomm_site/pages/HomePage';
 function App() {
   return (
     <>
-      <HomePage />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </>
   );
 }

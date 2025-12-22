@@ -4,10 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// React Routing:
+import { BrowserRouter } from 'react-router';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 setInterval(() => {
   root.render(
+    <BrowserRouter>
       <App />
+    </BrowserRouter>
   );
 }, 1000);
 
