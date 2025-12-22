@@ -28,6 +28,7 @@ import cottonSocksPng from "./components/lesson2/ecommerce_site/assets/cotton-so
 import plainTShirt from "./components/lesson2/ecommerce_site/assets/plain-t-shirt.png"; 
 // eslint-disable-next-line
 import tennisBalls from "./components/lesson2/ecommerce_site/assets/tennis-balls.png"; 
+import HomePage from './components/ecomm_site/pages/HomePage';
 
 /**
  * Exercises from Lesson 1
@@ -103,12 +104,12 @@ import tennisBalls from "./components/lesson2/ecommerce_site/assets/tennis-balls
 //   );
 // }
 /**
- * Excercises from Lesson 4
+ * Excercises from Lesson 5
  */
 function App() {
   return (
     <>
-      {/* Lesson 4 exercises go here */}
+      <HomePage />
     </>
   );
 }
