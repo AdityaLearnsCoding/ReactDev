@@ -132,6 +132,7 @@ function App() {
       .then( (resp) => {
           setCart(resp.data);
       })
+
   }, []); // behave like componentDidMount() - load once
 
   return (
@@ -140,7 +141,7 @@ function App() {
         <Route index element={<HomePage cart = { cart } />} />  {/* Default route, index is equivalent to path='/'  */}
         <Route path="checkout" element={<CheckoutPage cart = { cart } />} />
         <Route path="orders" element={<OrdersPage cart = { cart } />} />
-        <Route path="tracking" element={<TrackingPage cart = { cart } />} />
+        <Route path="tracking/:orderId/:productId" element={<TrackingPage cart = { cart } />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
