@@ -1,8 +1,9 @@
 import PageHeader from './Header';
 import './TrackingPage.css';
-import { NavLink } from 'react-router';
+import { NavLink, useParams } from 'react-router';
 
 const TrackingPage = ( { cart } ) => {
+    const [ orderId, productId ] = useParams();
     return (
         <>
            <title>Tracking</title>
