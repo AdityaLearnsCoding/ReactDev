@@ -4,9 +4,8 @@ import { useState, useEffect } from 'react';
 import './Header.css';
 import './HomePage.css';
 
-const HomePage = () => {
+const HomePage = ({ cart }) => {
     const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState([]);
     let baseUrl = "http://localhost:3001";
 
     useEffect(() => {
@@ -16,18 +15,12 @@ const HomePage = () => {
             setProducts(resp.data);
         })
 
-        // Fetch Cart items
-        axios.get(`${baseUrl}/api/cart-items`)
-        .then( (resp) => {
-            setCart(resp.data);
-        })
-
     },[]) // no dependency array so it will act like componentDidMount() - Load the products data once i.e. when the page loads
 
     return (
         <>
             <title>Ecommerce Project</title>
-            <PageHeader cartItems = {cart}/>
+            <PageHeader cartItems = { cart }/>
 
             <div className="home-page">
                 <div className="products-grid">

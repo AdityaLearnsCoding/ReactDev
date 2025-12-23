@@ -114,12 +114,29 @@ import NotFoundPage from './components/ecomm_site/pages/NotFound';
 
 // React Router:
 import { Route, Routes } from 'react-router';
+import { useEffect } from 'react';
 function App() {
+  /**
+   * We are not going to keep fetching cartItems via backend in HomePage and then in CheckoutPage
+   * Hence, its time to share the state of cartItems between HomePage and CheckoutPage
+   * - This means we need to uplift the state to a "closest common parent"
+   * - in this case, it's App component
+   */
+  const [cart, setCart] = useState([]);
+
+  useEffect ( () => {
+      // Fetch Cart items
+      axios.get(`${baseUrl}/api/cart-items`)
+      .then( (resp) => {
+          setCart(resp.data);
+      })
+  }, []) // behave like componentDidMount() - load once
+
   return (
     <>
       <Routes>
-        <Route index element={<HomePage />} />  {/* Default route, index is equivalent to path='/'  */}
-        <Route path="checkout" element={<CheckoutPage />} />
+        <Route index element={<HomePage cart = { cart } />} />  {/* Default route, index is equivalent to path='/'  */}
+        <Route path="checkout" element={<CheckoutPage cart = { cart } />} />
         <Route path="orders" element={<OrdersPage />} />
         <Route path="tracking" element={<TrackingPage />} />
         <Route path="*" element={<NotFoundPage />} />
