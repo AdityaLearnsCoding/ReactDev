@@ -6,18 +6,28 @@ import './HomePage.css';
 
 const HomePage = () => {
     const [products, setProducts] = useState([]);
-    
+    const [cart, setCart] = useState([]);
+    let baseUrl = "http://localhost:3001";
+
     useEffect(() => {
-        axios.get('http://localhost:3001/api/products')
+        // Fetch products
+        axios.get(`${baseUrl}/api/products`)
         .then( (resp) => {
             setProducts(resp.data);
         })
+
+        // Fetch Cart items
+        axios.get(`${baseUrl}/api/cart-items`)
+        .then( (resp) => {
+            setCart(resp.data);
+        })
+
     },[]) // no dependency array so it will act like componentDidMount() - Load the products data once i.e. when the page loads
 
     return (
         <>
             <title>Ecommerce Project</title>
-            <PageHeader />
+            <PageHeader cartItems = {cart}/>
 
             <div className="home-page">
                 <div className="products-grid">
