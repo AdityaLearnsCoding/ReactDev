@@ -2,11 +2,11 @@ import './OrdersPage.css';
 import PageHeader from './Header';
 import { NavLink } from 'react-router';
 
-const OrdersPage = () => {
+const OrdersPage = ({ cart }) => {
     return (
         <>
             <title>Orders</title>
-            <PageHeader />
+            <PageHeader cart = { cart }/>
 
             <div className="orders-page">
                 <div className="page-title">Your Orders</div>

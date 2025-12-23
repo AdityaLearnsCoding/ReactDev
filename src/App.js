@@ -114,7 +114,8 @@ import NotFoundPage from './components/ecomm_site/pages/NotFound';
 
 // React Router:
 import { Route, Routes } from 'react-router';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import axios  from 'axios';
 function App() {
   /**
    * We are not going to keep fetching cartItems via backend in HomePage and then in CheckoutPage
@@ -124,21 +125,23 @@ function App() {
    */
   const [cart, setCart] = useState([]);
 
-  useEffect ( () => {
+  useEffect( () => {
+      let baseUrl = "http://localhost:3001";
       // Fetch Cart items
-      axios.get(`${baseUrl}/api/cart-items`)
+      axios.get(`${baseUrl}/api/cart-items?expand=product`)
       .then( (resp) => {
+          console.log("cartItems: " + resp.data);
           setCart(resp.data);
       })
-  }, []) // behave like componentDidMount() - load once
+  }, []); // behave like componentDidMount() - load once
 
   return (
     <>
       <Routes>
         <Route index element={<HomePage cart = { cart } />} />  {/* Default route, index is equivalent to path='/'  */}
         <Route path="checkout" element={<CheckoutPage cart = { cart } />} />
-        <Route path="orders" element={<OrdersPage />} />
-        <Route path="tracking" element={<TrackingPage />} />
+        <Route path="orders" element={<OrdersPage cart = { cart } />} />
+        <Route path="tracking" element={<TrackingPage cart = { cart } />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
