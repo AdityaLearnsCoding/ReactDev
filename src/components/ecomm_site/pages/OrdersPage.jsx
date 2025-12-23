@@ -54,7 +54,7 @@ const OrdersPage = () => {
                         </div>
 
                         <div className="product-actions">
-                        <NavLink to="/tracking">
+                        <NavLink to="/tracking" end>
                             <button className="track-package-button button-secondary">
                             Track package
                             </button>
@@ -82,7 +82,7 @@ const OrdersPage = () => {
                         </div>
 
                         <div className="product-actions">
-                        <NavLink to="/tracking">
+                        <NavLink to="/tracking" end>
                             <button className="track-package-button button-secondary">
                             Track package
                             </button>
@@ -133,7 +133,7 @@ const OrdersPage = () => {
                         </div>
 
                         <div className="product-actions">
-                        <NavLink to="/tracking" >
+                        <NavLink to="/tracking" end>
                             <button className="track-package-button button-secondary">
                             Track package
                             </button>

@@ -4,7 +4,7 @@ const PageHeader = () => {
     return (
             <div className="header">
                 <div className="left-section">
-                    <NavLink to="/" className="header-link">
+                    <NavLink to="/" end className="header-link">
                     <img className="logo"
                         src="images/logo-white.png" />
                     <img className="mobile-logo"
@@ -21,12 +21,12 @@ const PageHeader = () => {
                 </div>
 
                 <div className="right-section">
-                    <NavLink className="orders-link header-link" to="/orders">
+                    <NavLink className="orders-link header-link" to="/orders" end>
 
                     <span className="orders-text">Orders</span>
                     </NavLink>
 
-                    <NavLink className="cart-link header-link" to="/checkout">
+                    <NavLink className="cart-link header-link" to="/checkout" end>
                     <img className="cart-icon" src="images/icons/cart-icon.png" />
                     <div className="cart-quantity">3</div>
                     <div className="cart-text">Cart</div>
