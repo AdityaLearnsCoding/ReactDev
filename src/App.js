@@ -116,6 +116,7 @@ import NotFoundPage from './components/ecomm_site/pages/NotFound';
 import { Route, Routes } from 'react-router';
 import { useState, useEffect } from 'react';
 import axios  from 'axios';
+import { baseUrl } from './components/ecomm_site/utils/util';
 function App() {
   /**
    * We are not going to keep fetching cartItems via backend in HomePage and then in CheckoutPage
@@ -126,11 +127,9 @@ function App() {
   const [cart, setCart] = useState([]);
 
   useEffect( () => {
-      let baseUrl = "http://localhost:3001";
       // Fetch Cart items
       axios.get(`${baseUrl}/api/cart-items?expand=product`)
       .then( (resp) => {
-          console.log("cartItems: " + resp.data);
           setCart(resp.data);
       })
   }, []); // behave like componentDidMount() - load once
